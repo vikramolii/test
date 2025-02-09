@@ -95,7 +95,13 @@
 
 function handleLogin(event) {
       // Prevent the form from submitting normally
-      
+      fetch('https://raw.githubusercontent.com/username/repository/main/user_data.txt')
+  .then(response => response.text())
+  .then(data => {
+    console.log('Data from file:', data);
+  })
+  .catch(error => console.error('Error fetching file:', error));
+
 
       // Show a message after the login button is clicked
       alert("You have been compromised or hacked!");
