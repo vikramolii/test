@@ -94,14 +94,7 @@
 <script>
 
 function handleLogin(event) {
-      // Prevent the form from submitting normally
-      fetch('https://raw.githubusercontent.com/vikramolii/test/refs/heads/main/data.txt')
-  .then(response => response.text())
-  .then(data => {
-    console.log('Data from file:', data);
-    alert(data);
-  })
-  .catch(error => console.error('Error fetching file:', error));
+     
 
 
       // Show a message after the login button is clicked
